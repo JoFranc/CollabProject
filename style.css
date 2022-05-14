@@ -1,0 +1,358 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    background-color: #857E7E;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #051537;
+    padding: 30px;
+    z-index: 100;
+    /* box-shadow: 1px 0 3px black; */
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-content .logo {
+    width: 50%;
+    margin-left: 3rem;
+}
+
+.nav-content .logo h1 {
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #BA6F0A;
+    cursor:default;
+}
+
+.nav-content ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    list-style: none;
+    font-weight: bold;
+    padding: 0;
+}
+
+.nav-content ul li {
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+.nav-content ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #B0CBB0;
+    transition: all 200ms ease-in-out;
+    padding: 36px 40px;
+    letter-spacing: 3px;
+}
+
+.nav-content ul li a:hover {
+    background-color: #BA6F0A;
+    color: #051537;
+}
+
+.nav-content i {
+    color: #1DC690;
+    font-size: 2.5rem;
+    display: none;
+    z-index: 100;
+}
+
+#panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100vh;
+    background-color: #203d6d;
+    opacity: 0.9;
+    transition: all 200ms ease-in-out;
+    padding: 0;
+}
+
+#panel ul {
+    list-style: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    row-gap: 3rem;
+}
+
+#panel ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #B0CBB0;
+    letter-spacing: 3px;
+    display: block;
+    transition: all 100ms ease-in-out;
+}
+
+#panel ul li a:hover {
+    color: aquamarine;
+    transform: scale(1.2);
+}
+
+
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #41729F;
+    background: linear-gradient(87deg, #6d869e 0%, #203d6d 100%);
+}
+
+@keyframes focus-in-contract{0%{letter-spacing:1em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+
+.welcome-text-container {
+    transition: transform 200ms;
+    text-align: center;
+    color: #B1D4E0;
+    animation:focus-in-contract .7s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+#welcome-section .welcome-text-container h1 {
+    color: #1DC690;
+    font-size: 5rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+#welcome-section .welcome-text-container:hover {
+    transform: scale(1.2);
+}
+
+#welcome-section .welcome-text-container p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    font-weight: 100;
+    display: inline;
+}
+
+.divider {
+    height: 4rem;
+    width: 100%;
+    background-color: #003060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    color: #B0CBB0;
+}
+
+
+#projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(87deg, #748f94 0%, rgba(12,45,72,1) 100%);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#projects h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color:#B1D4E0;
+    letter-spacing: 10px;
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    /* row-gap: 2rem; */
+    margin-bottom: 2rem;
+}
+
+.project-tile {
+    height: 249px;
+    position: relative;
+    display: block;
+    transition: all 200ms ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.project-tile:hover {
+    /* transform: rotate3d(0, 1, 0.1, 0.1turn); */
+    transform: rotateZ(0deg) scale(1.3);
+    box-shadow: 8px 8px 20px black;
+}
+
+.project-img {
+    width: 280px;
+    height: 250px;
+}
+
+#projects .tiles-container .project-tile a figcaption {
+    position: absolute;
+    top: 13rem;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+#contact-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-section h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #2E3437;
+}
+
+#contact-section ul {
+    display: flex;
+    margin-top: 2rem;
+    list-style: none;
+    column-gap: 2rem;
+}
+
+#contact-section ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+    transition: all 200ms ease-in-out;
+}
+
+#contact-section ul li a:hover {
+    color: #BA6F0A;
+}
+
+@media screen and (max-height: 750px) {
+    
+    #projects {
+        height: fit-content;
+        padding: 40px 60px
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #panel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    
+    #navbar .nav-content ul {
+        display: none;
+    }
+
+    #navbar .nav-content .logo {
+        width: 100%;
+    }
+
+    #welcome-section .welcome-text-container {
+        transform: scale(0.9);
+    }
+
+    #welcome-section .welcome-text-container:hover {
+        transform: scale(1);
+    }
+    
+    #welcome-section .welcome-text-container p {
+        display: block;
+    }
+
+    #projects {
+        /* height: fit-content; */
+        padding: 60px 40px;
+    }
+
+    .nav-content i {
+        display: block;
+        margin-right: 2.5rem;
+    }
+
+    .nav-content i:hover {
+        color:aquamarine;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    #welcome-section .welcome-text-container {
+        transform: scale(0.8);
+    }
+
+    #welcome-section .welcome-text-container:hover {
+        transform: scale(0.9);
+    }
+
+    #projects {
+        height: fit-content;
+    }
+
+    #projects h2 {
+        transform: scale(0.7);
+        letter-spacing: 8px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    #navbar {
+        padding-right: 0;
+    }
+
+    #navbar .nav-content .logo {
+        margin-left: 1rem;
+    }
+
+    .divider h2 {
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+    }
+
+    #navbar .nav-content .logo h1 {
+        font-size: 1.5rem;
+    }
+
+}
